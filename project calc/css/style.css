@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(43, 43, 43);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.grid-container{
+    background-color: rgb(37, 37, 37);
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 100px 80px 80px 80px 80px 80px;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.txt{
+    grid-column:1 / span 4 ;
+    background-color:#A7AF7C;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: 0;
+    
+    font-size: 30px;
+}
+.box{
+    position: relative;
+    /* background-color: #3b3b3b;
+    border: 2px solid black; */
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+      inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+      10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.plus{
+    grid-row: 4 / 6;
+    grid-column: 4 / 5;
+}
+
+.box::before{
+    position: absolute;
+    content: "";
+    z-index: 10;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+.clear{
+    grid-column: 1 / 2 span;
+    background: 0;
+    background-color: red!important;
+}
+
+.clear::before{
+    background: linear-gradient(90deg, #db0000, #ff4b4b);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.267);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+
+}
+
+i{
+    z-index: 100;
+    font-size: 20px;
+    font-weight: 600 ;
+}
+
+.Equal{
+    background: rgb(43, 46, 255);
+    background: linear-gradient(90deg, rgb(41, 45, 255) 0%, rgb(0, 162, 255) 100%);
+}
+
+.Equal::before{
+    background: linear-gradient(90deg, rgb(41, 44, 255) 0%, rgb(52, 133, 255) 100%);
+    border-left: 1px solid rgba(255, 255, 255, 0.267);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
